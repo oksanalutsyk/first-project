@@ -1,0 +1,30 @@
+@import "../../mixins/post.mixin.scss";
+
+//variables
+$display-flex: flex;
+$jc-space-around: space-around;
+$flexWrap: wrap;
+$textAlign: center;
+$cardImgWidth: 85%;
+
+
+.post {
+  @include postBlockView;
+}
+.postDescription,
+.button {
+  @include postInfBlock;
+}
+
+.posts {
+  display: $display-flex;
+  justify-content: $jc-space-around;
+  flex-wrap: $flexWrap;
+}
+.title {
+  text-align: $textAlign;
+}
+.mat-card-image {
+  width: $cardImgWidth;
+  margin: auto;
+}
