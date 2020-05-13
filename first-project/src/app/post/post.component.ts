@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
+export interface Post{
+  title: string;
+  img:string;
+  id?:number
+}
 
 @Component({
   selector: 'app-post',
@@ -7,13 +12,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  postImg: string = 'http://shorturl.at/cJPR3'
-  posts = [
+  postImg: string = 'https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/21_Angular-512.png'
+  posts:Post[] = [
     {
       title: 'Post title',
       img: this.postImg
@@ -39,4 +39,9 @@ export class PostComponent implements OnInit {
       img: this.postImg
     }
   ]
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }
