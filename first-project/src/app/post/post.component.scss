@@ -1,11 +1,12 @@
 @import "../../mixins/post.mixin.scss";
 
 //variables
-$display-flex: flex;
-$jc-space-around: space-around;
+$display: flex;
+$jc: space-around;
 $flexWrap: wrap;
 $textAlign: center;
 $cardImgWidth: 85%;
+$postBcg: ghostwhite;
 
 
 .post {
@@ -17,9 +18,12 @@ $cardImgWidth: 85%;
 }
 
 .posts {
-  display: $display-flex;
-  justify-content: $jc-space-around;
+  display: $display;
+  justify-content: $jc;
   flex-wrap: $flexWrap;
+  background-color:$postBcg;
+  min-height: 100vh;
+  align-items: flex-end;
 }
 .title {
   text-align: $textAlign;

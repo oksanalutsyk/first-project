@@ -21,22 +21,6 @@ export class PostComponent implements OnInit {
     {
       title: 'Post title',
       img: this.postImg
-    },
-    {
-      title: 'Post title',
-      img: this.postImg
-    },
-    {
-      title: 'Post title',
-      img: this.postImg
-    },
-    {
-      title: 'Post title',
-      img: this.postImg
-    },
-    {
-      title: 'Post title',
-      img: this.postImg
     }
   ]
   constructor() { }
