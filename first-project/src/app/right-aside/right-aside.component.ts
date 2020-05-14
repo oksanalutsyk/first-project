@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./right-aside.component.scss']
 })
 export class RightAsideComponent implements OnInit {
-  typesOfShoes: string[] = ['Post 1', 'Post 2', 'Post 3', 'Post 4', 'Post 5'];
+  postList: string[] = ['Post 1', 'Post 2', 'Post 3', 'Post 4', 'Post 5'];
   constructor() { }
 
   ngOnInit(): void {
