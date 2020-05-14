@@ -1,11 +1,11 @@
 @import "../../mixins/aside.mixin.scss";
 
-
+$display:flex;
 .aside {
   @include asideSize;
 }
 .postForm{
-  display: flex;
+  display: $display;
   justify-content: center;
   padding: 30px;
 }

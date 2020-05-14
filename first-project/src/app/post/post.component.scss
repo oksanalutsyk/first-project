@@ -1,4 +1,5 @@
 @import "../../mixins/post.mixin.scss";
+@import "../../styles.scss";
 
 //variables
 $display: flex;
@@ -6,7 +7,6 @@ $jc: space-around;
 $flexWrap: wrap;
 $textAlign: center;
 $cardImgWidth: 85%;
-$postBcg: ghostwhite;
 
 
 .post {
