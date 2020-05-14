@@ -1,0 +1,10 @@
+@import "../../mixins/aside.mixin.scss";
+
+.aside {
+  @include asideSize;
+}
+.list {
+  padding: 30px 0;
+}
+
+

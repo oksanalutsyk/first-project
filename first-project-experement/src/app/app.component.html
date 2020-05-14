@@ -1,0 +1,8 @@
+<main class="mainComponent">
+    <app-left-aside (onAdd)="updatePosts($event)"></app-left-aside>
+    <app-posts class="posts" [posts]='posts' *ngIf="posts.length>0 ; else emptyBlog"></app-posts>
+    <ng-template #emptyBlog>
+        <app-posts [posts]='posts' [ngClass]="{'emptyBlog': true}"></app-posts>
+    </ng-template>
+    <app-right-aside></app-right-aside>
+</main>

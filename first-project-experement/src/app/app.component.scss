@@ -1,0 +1,36 @@
+//variables
+$display: flex;
+$jc: space-around;
+$flexWrap: wrap;
+$postBcg: ghostwhite;
+
+.mainComponent {
+  display: flex;
+}
+
+.mainComponent {
+  :nth-child(1) {
+    flex: none;
+  }
+  :nth-child(2) {
+    flex: 1;
+  }
+  :nth-child(3) {
+    flex: none;
+  }
+}
+
+.posts {
+    display: $display;
+    justify-content: $jc;
+    flex-wrap: $flexWrap;
+    background-color:$postBcg;
+    min-height: 100vh;
+    // align-items: flex-end;
+    align-items: stretch;
+
+  }
+.emptyBlog{
+  text-align: center;
+  padding: 30px;
+}

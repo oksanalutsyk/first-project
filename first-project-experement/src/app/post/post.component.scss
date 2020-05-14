@@ -1,0 +1,32 @@
+@import "../../mixins/post.mixin.scss";
+
+//variables
+$textAlign: center;
+$cardImgWidth: 85%;
+
+.post {
+  @include postBlockView;
+  word-wrap: break-word;
+  // align-items: baseline;
+
+
+}
+.postDescription,
+.button {
+  @include postInfBlock;
+}
+
+.title {
+  text-align: $textAlign;
+}
+.mat-card-image {
+  width: $cardImgWidth;
+  margin: auto;
+}
+.mat-card-header {
+  flex-direction: column;
+}
+
+.description{
+  word-wrap: break-word;
+}
