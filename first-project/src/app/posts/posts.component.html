@@ -1,5 +1,6 @@
-<h2 *ngIf="posts.length==0 || posts==undefined; else show">Post list is empty. Please add some post )
-</h2>
-<ng-template #show>
-    <app-post *ngFor="let item of posts; let idx = index" [post]='item' [ngClass]="{'postElem': true}"></app-post>
-</ng-template>
+<app-post
+  *ngFor="let item of posts; let idx = index"
+  [post]="item"
+  (onDel)="sendId($event)"
+  [ngClass]="{ postElem: true }"
+></app-post>

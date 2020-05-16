@@ -2,9 +2,10 @@
 
 .aside {
   @include asideSize;
+  .list {
+    padding: 30px;
+  }
 }
-.list {
-  padding: 30px 0;
-}
+
 
 

@@ -1,23 +1,22 @@
-<aside [ngClass]="{'aside': true}">
-    <div [ngClass]="{'postForm': true}">
-        <div class="example-container">
-            <mat-form-field appearance="fill">
-                <mat-label>Post title</mat-label>
-                <input matInput 
-                placeholder="write here..."
-                [(ngModel)]="title"
-                >
-            </mat-form-field>
-            <br>
-            <mat-form-field appearance="fill">
-                <mat-label>Post Text</mat-label>
-                <textarea matInput 
-                placeholder="write here..."
-                [(ngModel)]="text"
-                ></textarea>
-            </mat-form-field>
-            <button mat-raised-button color="warn" (click)="addPost()" >Add post</button>
-        </div>
+<aside [ngClass]="{ aside: true }">
+  <div [ngClass]="{ postForm: true }">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Post title</mat-label>
+        <input matInput placeholder="write here..." [(ngModel)]="title" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="fill">
+        <mat-label>Post Text</mat-label>
+        <textarea
+          matInput
+          placeholder="write here..."
+          [(ngModel)]="body"
+        ></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="warn" (click)="addPost()">
+        Add post
+      </button>
     </div>
-   
+  </div>
 </aside>

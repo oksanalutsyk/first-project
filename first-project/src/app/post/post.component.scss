@@ -6,26 +6,28 @@ $cardImgWidth: 85%;
 
 .post {
   @include postBlockView;
-  word-wrap: break-word;
-
-
-}
-.postDescription,
-.button {
-  @include postInfBlock;
-}
-
-.title {
-  text-align: $textAlign;
+  .mat-card-header {
+    flex-direction: column;
+    .title {
+      text-align: $textAlign;
+    }
+  }
+  .postDescription {
+    @include postInfBlock;
+  }
+  .button {
+    @include postInfBlock;
+    display: flex;
+    justify-content: space-between;
+    .editButtons {
+      button {
+        margin: 0 5px;
+      }
+    }
+  }
+ 
 }
 .mat-card-image {
   width: $cardImgWidth;
   margin: auto;
-}
-.mat-card-header {
-  flex-direction: column;
-}
-
-.description{
-  word-wrap: break-word;
 }

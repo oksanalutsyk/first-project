@@ -1,25 +1,32 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export interface Post {
   title: string;
-  text: string;
-  img: string;
-  id?: number
+  body: string;
+  img?: string;
+  id?: number;
 }
 
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss']
+  styleUrls: ['./posts.component.scss'],
 })
 export class PostsComponent implements OnInit {
-  @Input() posts: Post[]
+  @Input() posts: Post[];
+  @Output() onDel: EventEmitter<string> = new EventEmitter<string>();
 
-  postImg: string = 'https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/21_Angular-512.png'
-  postsLength:string
-  constructor() { }
+  postImg: string =
+    'https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/21_Angular-512.png';
+  postsLength: string;
+  postId: any;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  sendId(postId: any) {
+    this.postId = postId;
+    this.onDel.emit(this.postId); //send data
   }
-
 }

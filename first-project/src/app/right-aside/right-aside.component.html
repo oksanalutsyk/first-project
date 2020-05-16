@@ -1,10 +1,9 @@
-<aside [ngClass]="{'aside': true}">
-    <div [ngClass]="{'list': true}">
-        <mat-selection-list #shoes>
-            <mat-list-option *ngFor="let shoe of typesOfShoes">
-                {{shoe}}
-            </mat-list-option>
-        </mat-selection-list>
-    </div>
-</aside> 
-
+<aside [ngClass]="{ aside: true }">
+  <div [ngClass]="{ list: true }">
+    <mat-selection-list #shoes>
+      <mat-list-option *ngFor="let shoe of typesOfShoes">
+        {{ shoe }}
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+</aside>
