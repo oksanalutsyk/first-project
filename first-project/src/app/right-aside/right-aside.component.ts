@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Post } from '../posts/posts.component';
+import { MatCheckbox } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-right-aside',
@@ -6,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./right-aside.component.scss'],
 })
 export class RightAsideComponent implements OnInit {
-  typesOfShoes: string[] = ['Post 1', 'Post 2', 'Post 3', 'Post 4', 'Post 5'];
+  @Input() posts: Post[];
+  @Input() labelPosition: 'after';
+  @Output() onShowButtons: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {}
+  isChecked: boolean;
+  id: any;
+
+  constructor() {
+    this.isChecked = false;
+  }
 
   ngOnInit(): void {}
+
+  onClick(event): void {
+    this.id = event.path[3].id;
+    this.onShowButtons.emit(this.id);
+  }
 }

@@ -4,9 +4,13 @@
     [postId]="postId"
   ></app-left-aside>
   <app-posts
-    [ngClass]="{'posts': true}"
+    [ngClass]="{ posts: true }"
     [posts]="posts"
     (onDel)="sendId($event)"
+    [showBlockId]="showBlockId"
   ></app-posts>
-  <app-right-aside></app-right-aside>
+  <app-right-aside
+    [posts]="posts"
+    (onShowButtons)="sendShowButtonsId($event)"
+  ></app-right-aside>
 </main>

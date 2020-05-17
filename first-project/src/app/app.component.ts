@@ -10,11 +10,15 @@ export class AppComponent {
   title = 'first-project';
   posts = [];
   postId: any;
+  showBlockId: any;
 
   updatePosts(newPosts: Post[]) {
     this.posts = newPosts;
   }
   sendId(postId: any) {
     this.postId = postId;
+  }
+  sendShowButtonsId(showId: any) {
+    this.showBlockId = showId;
   }
 }

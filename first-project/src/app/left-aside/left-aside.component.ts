@@ -72,6 +72,7 @@ export class LeftAsideComponent implements OnInit, OnChanges {
         body: this.body,
         img: this.postImg,
         id: Date.now(),
+        checked: false,
       };
       this.posts.unshift(post);
       this.onAdd.emit(this.posts); //send data

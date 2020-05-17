@@ -1,9 +1,17 @@
 <aside [ngClass]="{ aside: true }">
   <div [ngClass]="{ list: true }">
-    <mat-selection-list #shoes>
-      <mat-list-option *ngFor="let shoe of typesOfShoes">
-        {{ shoe }}
-      </mat-list-option>
-    </mat-selection-list>
+    <!-- <mat-checkbox
+      *ngFor="let item of posts"
+      id="{{ item.id }}"
+      (click)="onClick($event)"
+      >{{ item.title }}</mat-checkbox
+    > -->
+    <mat-radio-button
+      value="1"
+      *ngFor="let item of posts"
+      id="{{ item.id }}"
+      (click)="onClick($event)"
+      >{{ item.title }}</mat-radio-button
+    >
   </div>
 </aside>

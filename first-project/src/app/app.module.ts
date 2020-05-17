@@ -14,11 +14,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     PostComponent,
     LeftAsideComponent,
     RightAsideComponent,
-    PostsComponent
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,13 +35,13 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatListModule,
     FormsModule,
     HttpClientModule,
-    MatIconModule
-
+    MatIconModule,
+    MatCheckboxModule,
+    MatRadioModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

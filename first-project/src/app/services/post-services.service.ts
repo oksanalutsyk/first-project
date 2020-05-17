@@ -10,6 +10,8 @@ export class PostService {
   constructor(private http: HttpClient) {}
 
   public getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
+    return this.http.get<Post[]>(
+      'https://jsonplaceholder.typicode.com/posts?_limit=10'
+    );
   }
 }
