@@ -11,7 +11,9 @@
       *ngFor="let item of posts"
       id="{{ item.id }}"
       (click)="onClick($event)"
-      >{{ item.title }}</mat-radio-button
+      
+      >
+      <label for="" [ngClass]="{'radioLabel': true}">{{ item.title }}</label></mat-radio-button
     >
   </div>
 </aside>
