@@ -1,3 +1,4 @@
+<!-- {{ clearValue }} -->
 <mat-card class="example-card post" id="{{ post.id }}">
   <img mat-card-image [src]="postImg" alt="{{ post.title }} image" />
   <mat-card-header>
@@ -8,7 +9,10 @@
   </mat-card-content>
   <mat-card-actions class="button">
     <button mat-stroked-button color="warn">Click here</button>
-    <div [ngClass]="{ editButtons: true }" *ngIf="showButton == post.id">
+    <div
+      [ngClass]="{ editButtons: true }"
+      *ngIf="showButton == post.id && clearValue == false"
+    >
       <button
         mat-mini-fab
         color="primary"

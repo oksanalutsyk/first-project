@@ -42,12 +42,6 @@ export class LeftAsideComponent implements OnInit, OnChanges {
   }
 
   deletePost(id) {
-    // for(let i=0; i<this.posts.length; i++){
-    //   if(this.posts[i].id==id){
-    //     this.posts.splice(i,1);
-    //   }
-    // }
-
     this.posts.filter((elem, i) => {
       if (elem.id == id) return this.posts.splice(i, 1);
     });

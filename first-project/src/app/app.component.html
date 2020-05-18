@@ -8,9 +8,11 @@
     [posts]="posts"
     (onDel)="sendId($event)"
     [showBlockId]="showBlockId"
+    [isClear]="isClear"
   ></app-posts>
   <app-right-aside
     [posts]="posts"
     (onShowButtons)="sendShowButtonsId($event)"
+    (sendIsClear)="sendIsClearTrue($event)"
   ></app-right-aside>
 </main>

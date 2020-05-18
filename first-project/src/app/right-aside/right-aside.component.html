@@ -1,17 +1,12 @@
 <aside [ngClass]="{ aside: true }">
   <div [ngClass]="{ list: true }">
-    <!-- <mat-checkbox
-      *ngFor="let item of posts"
-      id="{{ item.id }}"
-      (click)="onClick($event)"
-      >{{ item.title }}</mat-checkbox
-    > -->
+    <button mat-stroked-button color="warn" (click)="resetRadioButtons($event)">Reset</button>
     <mat-radio-button
       value="1"
       *ngFor="let item of posts"
       id="{{ item.id }}"
       (click)="onClick($event)"
-      
+      #resetRadio
       >
       <label for="" [ngClass]="{'radioLabel': true}">{{ item.title }}</label></mat-radio-button
     >

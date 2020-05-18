@@ -11,6 +11,7 @@ export class AppComponent {
   posts = [];
   postId: any;
   showBlockId: any;
+  isClear: boolean;
 
   updatePosts(newPosts: Post[]) {
     this.posts = newPosts;
@@ -20,5 +21,8 @@ export class AppComponent {
   }
   sendShowButtonsId(showId: any) {
     this.showBlockId = showId;
+  }
+  sendIsClearTrue(isClear: boolean) {
+    this.isClear = isClear;
   }
 }
